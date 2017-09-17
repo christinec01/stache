@@ -12,8 +12,7 @@ export default class DrawerContents extends Component {
   state = {
     typeOption: "house",
     rangeOption: "low",
-    selectedDate: moment(),
-    open: false
+    selectedDate: moment()
   };
   render() {
     var options = [
