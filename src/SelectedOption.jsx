@@ -11,7 +11,7 @@ export default function SelectedOption(props) {
   console.log(props);
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
-      <img src={ALL_LABELS_TO_ICONS[props.value]} />
+      <img style={{ paddingRight: 5 }} src={ALL_LABELS_TO_ICONS[props.value]} />
       <div>{props.label}</div>
     </div>
   );

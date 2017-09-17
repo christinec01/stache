@@ -95,7 +95,7 @@ export default class DrawerContents extends Component {
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
-              paddingRight: 5,
+              paddingLeft: 5,
               color: "lightgray"
             }}
           >
@@ -104,16 +104,16 @@ export default class DrawerContents extends Component {
                 borderTop: "1px solid",
                 borderColor: "lightgray",
                 display: "flex",
-                paddingTop: 10,
-                paddingBottom: 20,
-                width: "96%",
+                paddingTop: 15,
+                paddingBottom: 15,
+                width: "100%",
                 justifyContent: "space-between"
               }}
             >
-              <div style={{ paddingRight: 20, color: "#B4B4BD" }}>Since</div>
-              <div className={"date-parent"}>
+              <div style={{ paddingRight: 20, color: "#B4B4BD" }}>From</div>
+              <div className={"date-parent "}>
                 <DatePicker
-                  placeholderText="DD/MM/YYY"
+                  placeholderText="DD/MM/YY"
                   onChange={date => this.setState({ selectedDate: date })}
                   dateFormat="MM/DD/YY"
                 />
@@ -123,18 +123,20 @@ export default class DrawerContents extends Component {
               style={{
                 borderTop: "1px solid",
                 borderColor: "lightgray",
-                paddingTop: 10,
+                paddingTop: 15,
                 display: "flex",
-                width: "96%",
+                width: "100%",
                 justifyContent: "space-between"
               }}
             >
               <div style={{ paddingRight: 20, color: "#B4B4BD" }}>Until</div>
-              <DatePicker
-                placeholderText="DD/MM/YYY"
-                onChange={date => this.setState({ selectedDate: date })}
-                dateFormat="MM/DD/YY"
-              />
+              <div className={"date-parent"}>
+                <DatePicker
+                  placeholderText="DD/MM/YY"
+                  onChange={date => this.setState({ selectedDate: date })}
+                  dateFormat="MM/DD/YY"
+                />
+              </div>
             </div>
           </div>
         </div>

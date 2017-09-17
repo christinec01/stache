@@ -4,6 +4,13 @@ body {
   font-family: sans-serif;
 }
 
+input {
+  caret-color: #44d2a0;
+}
+.date-parent {
+  padding-right: 20px;
+}
+
 .Select-value {
   display: flex;
   align-items: center;
@@ -12,6 +19,19 @@ body {
 .Select-option:hover {
   background-color: #44d2a0;
   color: white;
+}
+
+.Select-input {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+  height: 58px;
+  cursor: pointer;
+}
+
+.Select-placeholder {
+  display: flex;
+  align-items: center;
 }
 
 .Select-control {
@@ -28,6 +48,7 @@ body {
   background-position-x: right;
   background-position-y: center;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .Select-value-icon {
