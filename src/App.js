@@ -10,13 +10,21 @@ import Footer from "./footer.jsx";
 
 class App extends Component {
   state = {
-    open: false
+    open: false,
+    shouldReplaceCardsWithMap: false
   };
 
   render() {
     return (
       <div className="App">
-        <Nav onFiltersClick={() => this.setState({ open: true })} />
+        <Nav
+          onFiltersClick={() => this.setState({ open: true })}
+          shouldReplaceCardsWithMap={this.state.shouldReplaceCardsWithMap}
+          onReplaceCardsWithMap={() =>
+            this.setState({ shouldReplaceCardsWithMap: true })}
+          onReplaceMapWithCards={() =>
+            this.setState({ shouldReplaceCardsWithMap: false })}
+        />
 
         <Drawer
           open={this.state.open}
@@ -30,8 +38,11 @@ class App extends Component {
         </Drawer>
 
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <SpacesShelf onFiltersClick={() => this.setState({ open: true })} />
-          <Map />
+          <SpacesShelf
+            onFiltersClick={() => this.setState({ open: true })}
+            shouldReplaceCardsWithMap={this.state.shouldReplaceCardsWithMap}
+          />
+          <Map className="side-map" />
         </div>
         <Footer style={{ display: "flex" }} />
       </div>

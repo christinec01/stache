@@ -121,7 +121,15 @@ body {
 .card-size {
   width: 48%;
 }
+.side-map {
+  width: 50%;
+  padding-top: 20px;
+}
 
+.map2 {
+  width: 100%;
+  padding-top: 20px;
+}
 /* testing */
 
 @media all and (max-width: 1024px) {
@@ -131,22 +139,30 @@ body {
   .nav-links {
     display: none;
   }
+
   .filter-icon {
-    visibility: visible;
+    visibility: show;
   }
-  .map {
-    display: none;
-  }
+
   .cardWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
   }
+  .side-map {
+    display: none;
+  }
 }
 
 @media all and (min-width: 1024px) {
+  .nav-links {
+    visibility: visible;
+  }
   .filter-icon {
+    display: none;
+  }
+  .map2 {
     display: none;
   }
 }

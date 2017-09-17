@@ -12,7 +12,8 @@ export default class DrawerContents extends Component {
   state = {
     typeOption: "house",
     rangeOption: "low",
-    selectedDate: moment()
+    selectedDate: moment(),
+    open: false
   };
   render() {
     var options = [
@@ -196,6 +197,9 @@ export default class DrawerContents extends Component {
           }}
         >
           <button
+            onClick={this.closeDrawer}
+            onClose={() => this.setState({ open: false })}
+            className="icono-cross"
             style={{
               borderRadius: 2,
               backgroundColor: "#2DB991",

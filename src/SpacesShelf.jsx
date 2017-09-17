@@ -4,7 +4,10 @@ import CardsSection from "./CardsSection";
 import carratDown from "./carrat-down.svg";
 import DrawerPopOut from "./DrawerPopOut";
 
-export default function SpacesShelf({ onFiltersClick }) {
+export default function SpacesShelf({
+  onFiltersClick,
+  shouldReplaceCardsWithMap
+}) {
   return (
     <div
       className={"pll prl"}
@@ -12,7 +15,7 @@ export default function SpacesShelf({ onFiltersClick }) {
     >
       <DrawerPopOut />
       <SpacesFilters onFiltersClick={onFiltersClick} />
-      <CardsSection />
+      <CardsSection shouldReplaceCardsWithMap={shouldReplaceCardsWithMap} />
     </div>
   );
 }

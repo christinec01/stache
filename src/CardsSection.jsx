@@ -10,8 +10,12 @@ import carIcon from "./car-icon.png";
 import house from "./house.png";
 import basementIcon from "./basement-icon.png";
 import garageIcon from "./garage-icon.png";
+import Map from "./Map";
 
-export default function CardsSection() {
+export default function CardsSection({ shouldReplaceCardsWithMap }) {
+  if (shouldReplaceCardsWithMap) {
+    return <Map className={"map2"} />;
+  }
   return (
     <div
       style={{
