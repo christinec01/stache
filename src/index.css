@@ -157,7 +157,6 @@ input {
 }
 
 .map2 {
-  width: 100%;
   padding-top: 20px;
 }
 /* testing */
@@ -194,6 +193,9 @@ input {
   }
   .map2 {
     display: none;
+  }
+  .cardsdiv {
+    visibility: visible;
   }
 }
 

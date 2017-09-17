@@ -18,6 +18,7 @@ export default function CardsSection({ shouldReplaceCardsWithMap }) {
   }
   return (
     <div
+      className={"cardsdiv"}
       style={{
         display: "flex",
         flexWrap: "wrap",
