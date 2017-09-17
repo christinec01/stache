@@ -12,7 +12,8 @@ export default class DrawerContents extends Component {
   state = {
     typeOption: "house",
     rangeOption: "low",
-    selectedDate: moment()
+    startDate: null,
+    endDate: null
   };
   render() {
     var options = [
@@ -113,8 +114,10 @@ export default class DrawerContents extends Component {
               <div style={{ paddingRight: 20, color: "#B4B4BD" }}>From</div>
               <div className={"date-parent "}>
                 <DatePicker
+                  selected={this.state.startDate}
                   placeholderText="DD/MM/YY"
-                  onChange={date => this.setState({ selectedDate: date })}
+                  onChange={startDate =>
+                    this.setState({ startDate: startDate })}
                   dateFormat="MM/DD/YY"
                 />
               </div>
@@ -132,8 +135,9 @@ export default class DrawerContents extends Component {
               <div style={{ paddingRight: 20, color: "#B4B4BD" }}>Until</div>
               <div className={"date-parent"}>
                 <DatePicker
+                  selected={this.state.endDate}
                   placeholderText="DD/MM/YY"
-                  onChange={date => this.setState({ selectedDate: date })}
+                  onChange={endDate => this.setState({ endDate: endDate })}
                   dateFormat="MM/DD/YY"
                 />
               </div>
