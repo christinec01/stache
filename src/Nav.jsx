@@ -21,7 +21,12 @@ export default function Nav({
       }}
       className="ptm pbm prl pll thin-border-lightgray"
     >
-      <img style={{ width: 60 }} src={logo} />
+      <img
+        style={{ width: 60 }}
+        src={logo}
+        className={"clickable"}
+        onClick={onLogoClick}
+      />
       <div style={{ display: "flex", alignItems: "center" }}>
         <div className="nav-links prm active-green clickable">
           Search Spaces
@@ -45,8 +50,19 @@ export default function Nav({
             )
           }
         />
-        <img className="nav-links plm" src={profile} />
+        <img
+          className="nav-links plm clickable"
+          onClick={onProfileClick}
+          src={profile}
+        />
       </div>
     </div>
   );
+}
+
+function onProfileClick() {
+  return alert("Success! You've clicked on 'Profile");
+}
+function onLogoClick() {
+  return alert("Error! You're already here");
 }
