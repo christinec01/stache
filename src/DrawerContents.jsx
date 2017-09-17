@@ -90,32 +90,53 @@ export default class DrawerContents extends Component {
           >
             Date
           </span>
-          <table>
-            <tr>
-              <td>Since</td>
-              <td />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              paddingRight: 5,
+              color: "lightgray"
+            }}
+          >
+            <div
+              style={{
+                borderTop: "1px solid",
+                borderColor: "lightgray",
+                display: "flex",
+                paddingTop: 10,
+                paddingBottom: 20,
+                width: "96%",
+                justifyContent: "space-between"
+              }}
+            >
+              <div style={{ paddingRight: 20, color: "#B4B4BD" }}>Since</div>
+              <div className={"date-parent"}>
+                <DatePicker
+                  placeholderText="DD/MM/YYY"
+                  onChange={date => this.setState({ selectedDate: date })}
+                  dateFormat="MM/DD/YY"
+                />
+              </div>
+            </div>
+            <div
+              style={{
+                borderTop: "1px solid",
+                borderColor: "lightgray",
+                paddingTop: 10,
+                display: "flex",
+                width: "96%",
+                justifyContent: "space-between"
+              }}
+            >
+              <div style={{ paddingRight: 20, color: "#B4B4BD" }}>Until</div>
               <DatePicker
-                selected={this.state.selectedDate}
+                placeholderText="DD/MM/YYY"
                 onChange={date => this.setState({ selectedDate: date })}
                 dateFormat="MM/DD/YY"
               />
-              <td>
-                <img src={carrat} />
-              </td>
-            </tr>
-            <tr>
-              <td>Until</td>
-              <td />
-              <DatePicker
-                selected={this.state.selectedDate}
-                onChange={date => this.setState({ selectedDate: date })}
-                dateFormat="MM/DD/YY"
-              />
-              <td>
-                <img src={carrat} />
-              </td>
-            </tr>
-          </table>
+            </div>
+          </div>
         </div>
         <div className={"ptl pll prl"}>
           <span
@@ -196,9 +217,8 @@ export default class DrawerContents extends Component {
           }}
         >
           <button
-            onClick={this.closeDrawer}
-            onClose={() => this.setState({ open: false })}
-            className="icono-cross"
+            onClick={this.props.onClose}
+            className="icono-cross clickable"
             style={{
               borderRadius: 2,
               backgroundColor: "#2DB991",

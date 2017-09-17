@@ -34,7 +34,7 @@ class App extends Component {
         >
           <i onClick={this.closeDrawer} className="icono-cross" />
 
-          <DrawerContents />
+          <DrawerContents onClose={() => this.setState({ open: false })} />
         </Drawer>
 
         <div style={{ display: "flex", justifyContent: "space-between" }}>

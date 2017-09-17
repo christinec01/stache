@@ -13,8 +13,6 @@ export default class SpacesFilters extends Component {
     location: null
   };
 
-  steen = 5;
-
   render() {
     var options = [
       { value: "tiny", label: "Tiny (25 sq ft)" },

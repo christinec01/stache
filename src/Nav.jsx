@@ -23,10 +23,12 @@ export default function Nav({
     >
       <img style={{ width: 60 }} src={logo} />
       <div style={{ display: "flex", alignItems: "center" }}>
-        <div className="nav-links prm active-green">Search Spaces</div>
-        <div className="nav-links prm">Bookings</div>
-        <div className="nav-links prm">Favorites</div>
-        <div className="nav-links prm">Message</div>
+        <div className="nav-links prm active-green clickable">
+          Search Spaces
+        </div>
+        <div className="nav-links prm clickable">Bookings</div>
+        <div className="nav-links prm clickable">Favorites</div>
+        <div className="nav-links prm clickable">Message</div>
         <img
           className="filter-icon prm clickable"
           src={filterIcon}
