@@ -44,7 +44,6 @@ class App extends Component {
           />
           <Map className="side-map" />
         </div>
-        <Footer style={{ display: "flex" }} />
       </div>
     );
   }
